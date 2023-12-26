@@ -10,3 +10,9 @@ app.MapControllerRoute(
 //app.MapGet("/", () => "Hello World!");
 
 app.Run();
+
+//Routing is 2 types
+
+// Conventional Base Routing => this is example of conventional based routing. in this code is applied on programe.cs 
+ 
+// Attribute Base Routing
