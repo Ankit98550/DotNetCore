@@ -1,0 +1,15 @@
+﻿<h1>index page</h1>
+
+@{
+    <h1>User is </h1>@ViewBag.user;
+    <h1>Count is </h1>@ViewBag.Count;
+    foreach (var item in ViewBag.fruits)
+    {
+        <h3>@item</h3>
+    }
+
+    foreach (var item in (List<string>)ViewData["fruits"])
+    {
+        <h3>@item</h3>
+    }
+}
