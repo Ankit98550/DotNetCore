@@ -16,6 +16,9 @@ namespace LayoutMasterPage.Controllers
         public IActionResult Contact() 
         {
             return View();
+        } public IActionResult Help() 
+        {
+            return View();
         }
     }
 }
