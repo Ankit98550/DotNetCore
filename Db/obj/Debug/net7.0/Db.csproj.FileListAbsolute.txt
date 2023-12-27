@@ -1,0 +1,12 @@
+E:\Ankit\Db\bin\Debug\net7.0\Db.deps.json
+E:\Ankit\Db\bin\Debug\net7.0\Db.dll
+E:\Ankit\Db\bin\Debug\net7.0\Db.pdb
+E:\Ankit\Db\obj\Debug\net7.0\Db.csproj.AssemblyReference.cache
+E:\Ankit\Db\obj\Debug\net7.0\Db.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ankit\Db\obj\Debug\net7.0\Db.AssemblyInfoInputs.cache
+E:\Ankit\Db\obj\Debug\net7.0\Db.AssemblyInfo.cs
+E:\Ankit\Db\obj\Debug\net7.0\Db.csproj.CoreCompileInputs.cache
+E:\Ankit\Db\obj\Debug\net7.0\Db.dll
+E:\Ankit\Db\obj\Debug\net7.0\refint\Db.dll
+E:\Ankit\Db\obj\Debug\net7.0\Db.pdb
+E:\Ankit\Db\obj\Debug\net7.0\ref\Db.dll
