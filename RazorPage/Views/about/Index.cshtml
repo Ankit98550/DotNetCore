@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+@{
+    var name = "Ankit";
+    string[] data = { "Rohit", "Ankit", "Hai"};
+foreach (var item in    data)
+    {
+        <h1>@item</h1>
+    }
+    var x = 1;
+    for (int i = x; i < 11; i++)
+    {
+      <h1>@(i*2)</h1>
+    }
+
+}
