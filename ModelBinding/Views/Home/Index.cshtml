@@ -1,0 +1,66 @@
+﻿@model ModelBinding.Models.Employee
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<form asp-action="index" asp-controller="home" method="post">
+    <div asp-validation-summary="All" ></div>
+
+    <label asp-for="name">Enter Name :</label>
+    <input asp-for="name" placeholder="Enter Name" class="form-control" />
+    <span asp-validation-for="name"></span>
+    <br /> 
+    <label asp-for="Email">Enter Email :</label>
+    <input asp-for="Email" placeholder="Enter Email" class="form-control" />
+    <span asp-validation-for="Email"></span>
+    <br />
+
+    <label asp-for="Gender" >Select Gender</label>
+    <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+        <option value="">Select Gender</option>
+    </select>
+    <br />
+    <label asp-for="age">Enter Age :</label>
+    <input asp-for="age" placeholder="Enter age" class="form-control" />
+    <br /> 
+    <label asp-for="des">Enter Desc :</label>
+    <input asp-for="des" placeholder="Enter des" class="form-control" />
+    <br />
+    <label asp-for="salary">Enter salary :</label>
+    <input asp-for="salary" placeholder="Enter salary" class="form-control" />
+    <br />
+    <label asp-for="Married">Married</label>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="Married" value="yes" id="yes">
+        <label class="form-check-label" for="yes">
+            Yes
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="Married" value="no" id="no" >
+        <label class="form-check-label" for="no">
+            No
+        </label>
+    </div>
+
+    <br />
+    @* <label asp-for="Married">Enter Married :</label>
+    <input asp-for="Married" placeholder="Enter Married" class="form-control" />
+    <br /> *@
+   @* <label asp-for="Description">Enter Description :</label>
+    <input asp-for="Description" placeholder="Enter Description" class="form-control" />
+    <br /> *@
+    <label asp-for="Description">Enter Description :</label>
+    <textarea asp-for="Description" class="form-control" rows="5" placeholder="Enter Description" >
+
+    </textarea>
+<br />
+<input type="submit" value="submit" class="btn btn-outline-primary" />
+</form>
