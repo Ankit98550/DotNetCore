@@ -1,0 +1,20 @@
+﻿@model List<ViewImports.Models.Student>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@{
+    foreach (var item in Model)
+    {
+        <h1>@item.id</h1>
+        <h1>@item.age</h1>
+        <h1>@item.name</h1>
+        <h1>@item.Gender</h1>
+    }
+}

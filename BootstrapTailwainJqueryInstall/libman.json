@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "tailwindcss@2.2.19",
+      "destination": "wwwroot/lib/tailwindcss/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "twitter-bootstrap@5.3.2",
+      "destination": "wwwroot/lib/twitter-bootstrap/"
+    }
+  ]
+}

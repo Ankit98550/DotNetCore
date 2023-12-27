@@ -1,0 +1,13 @@
+﻿@* @model List<ViewImports.Models.Student> *@
+
+
+
+@{
+    foreach (var item in Model)
+    {
+        <h1>@item.id</h1>
+        <h1>@item.age</h1>
+        <h1>@item.name</h1>
+        <h1>@item.Gender</h1>
+    }
+}
