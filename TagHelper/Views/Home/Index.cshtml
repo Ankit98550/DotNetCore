@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@Html.ActionLink("about","about","home")
+<a href="@Url.Action("About","Home")">About Url Action</a>
+
+<a asp-controller="home" asp-action="about" asp-route-id="1">About Core using</a> 
+@* home/action/1 *@
