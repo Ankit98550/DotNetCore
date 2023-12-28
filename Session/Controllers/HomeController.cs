@@ -16,6 +16,8 @@ namespace Session.Controllers
         public IActionResult Index()
         {
             HttpContext.Session.SetString("user", "Rohit");
+            //every session has unique id
+            TempData["id"] = HttpContext.Session.Id;
 
             return View();
         }
