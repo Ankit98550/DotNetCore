@@ -1,0 +1,72 @@
+﻿@model UserloginSessionLogoutApp.Models.User
+
+@{
+    ViewData["Title"] = "register";
+}
+
+<h1>register</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    @{
+        if (ViewBag.suc!=null)
+        {
+            <h1 class="text-success">@ViewBag.suc</h1>
+        }if (ViewBag.fail !=null)
+        {
+            <h1 class="text-danger">@ViewBag.fail</h1>
+        }
+    }
+    <div class="col-md-4">
+        <form asp-action="register" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            @* making ddropdown using Html.Dropdown list 
+            <label asp-for="Gender">Select Gender</label>
+            @Html.DropDownList("Gender",ViewBag.Gender,"select Gender",new{@class="form-control"})
+             making ddropdown using *@
+
+             <label for="Gender">Select Gender</label>
+             <select asp-for="Gender" asp-items="@ViewBag.Gender" class="form-control">
+             <option value="">Select Gender</option>
+             </select>
+
+            @* <div class="form-group">
+                 <label asp-for="Gender" class="control-label"></label>
+                 <input asp-for="Gender" class="form-control" />
+                 <span asp-validation-for="Gender" class="text-danger"></span>
+             </div>*@
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Login">Login</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
