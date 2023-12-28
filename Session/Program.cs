@@ -10,8 +10,13 @@ builder.Services.AddSession();
 // =>>>>>>>>>>>>>>>>>>>>>>>> To get session in view page
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-var app = builder.Build();
 
+// =>>>>>>>>>>>>>>>>>>>>>>>>> to add automatic time out of session
+builder.Services.AddSession(opt => {
+    opt.IdleTimeout = TimeSpan.FromMinutes(1);
+}) ;
+
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
