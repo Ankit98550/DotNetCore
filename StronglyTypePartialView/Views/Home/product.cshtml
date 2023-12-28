@@ -1,0 +1,20 @@
+﻿@model IEnumerable<StronglyTypePartialView.Models.Product>
+@{
+    ViewData["Title"] = "product";
+}
+
+<h1>product</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            
+        <div class="col-lg-4">
+                @* <partial name="_productView" model="item"> *@
+                @* @Html.Partial("_productView",item); *@
+                @await Html.PartialAsync("_productView",item)
+
+        </div>
+        }
+    </div>
+</div>
