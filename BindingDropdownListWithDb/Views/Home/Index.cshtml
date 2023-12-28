@@ -1,0 +1,23 @@
+﻿@model BindingDropdownListWithDb.Models.StudentModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@{
+    if (ViewBag.Selectvalue != null)
+    {
+<h1>@ViewBag.Selectvalue</h1>
+        
+    }
+}
+<form asp-action="Index" asp-controller="Home" method="post">
+
+<label asp-for="Id" >Select Name</label>
+<select asp-for="Id" asp-items="@(new SelectList(Model.studentList,"Value","Text"))" class="form-control"></select>
+<br />
+<input type="submit" value="submit"  class="btn btn-outline-info"/>
+</form>
